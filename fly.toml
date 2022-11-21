@@ -1,15 +1,19 @@
-app = "mastodon"
+app = "sethetter-social"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
 
 [env]
-  LOCAL_DOMAIN = "mastodon.fly.dev"
+  LOCAL_DOMAIN = "sethetter.com"
+  WEB_DOMAIN = "sethetter.social"
+
   RAILS_ENV = "production"
   RAILS_LOG_TO_STDOUT = "enabled"
   WEB_CONCURRENCY = "1"
-  REDIS_HOST = "mastodon-redis.internal"
+
+  REDIS_HOST = "sethetter-social-redis.internal"
   REDIS_PORT = "6379"
+
   # S3_ENABLED=true
   # S3_BUCKET=files.example.com
   # S3_ALIAS_HOST=files.example.com

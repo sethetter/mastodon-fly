@@ -1,4 +1,4 @@
-app = "mastodon-redis"
+app = "sethetter-social-redis"
 
 [[mounts]]
   source = "mastodon_redis"
