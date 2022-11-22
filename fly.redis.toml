@@ -1,5 +1,8 @@
 app = "sethetter-social-redis"
 
+[env]
+  PRIMARY_REGION = "ord"
+
 [[mounts]]
   source = "mastodon_redis"
   destination = "/data"

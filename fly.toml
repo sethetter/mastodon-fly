@@ -4,6 +4,7 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 
 [env]
+  PRIMARY_REGION = "ord"
   LOCAL_DOMAIN = "sethetter.com"
   WEB_DOMAIN = "sethetter.social"
 
@@ -14,14 +15,11 @@ kill_timeout = 5
   REDIS_HOST = "sethetter-social-redis.internal"
   REDIS_PORT = "6379"
 
-  # S3_ENABLED=true
-  # S3_BUCKET=files.example.com
-  # S3_ALIAS_HOST=files.example.com
-
-[mounts]
-  processes = ["rails"]
-  source = "mastodon_uploads"
-  destination = "/opt/mastodon/public/system"
+  S3_ENABLED="true"
+  S3_REGION="us-east-1"
+  S3_HOSTNAME="s3.amazonaws.com"
+  S3_BUCKET="sethetter-social-uploads"
+  S3_ALIAS_HOST="cdn.sethetter.social"
 
 [processes]
   rails = "bundle exec rails s -p 8080"
